@@ -34,11 +34,13 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.dgvStock = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCodigo
             // 
+            this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCodigo.FormattingEnabled = true;
             this.cmbCodigo.Location = new System.Drawing.Point(12, 63);
             this.cmbCodigo.Name = "cmbCodigo";
@@ -92,6 +94,17 @@
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(333, 52);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(114, 33);
+            this.btnMostrar.TabIndex = 11;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // frmStock
             // 
@@ -100,6 +113,7 @@
             this.BackgroundImage = global::prySalvarezzaConexionBDD.Properties.Resources.Fondo_login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 454);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.cmbCodigo);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.lblCodigo);
@@ -109,6 +123,7 @@
             this.Name = "frmStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock";
+            this.Load += new System.EventHandler(this.frmStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,5 +137,6 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.DataGridView dgvStock;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }
